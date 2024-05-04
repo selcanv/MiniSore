@@ -6,47 +6,46 @@ using System.Web.Mvc;
 using MiniSore.Models;
 namespace MiniSore.Controllers
 {
-    public class ProductController : Controller
+    public class SaleController : Controller
     {
         DbMiniStoreEntities db = new DbMiniStoreEntities();
         public ActionResult Index()
         {
-            var values = db.TblProduct.ToList();
+            var values = db.TblSale.ToList();
             return View(values);
         }
         [HttpGet]
-        public ActionResult CreateProduct()
+        public ActionResult CreateSale()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult CreateProduct(TblProduct p)
+        public ActionResult CreateSale(TblSale p)
         {
-            db.TblProduct.Add(p);
+            db.TblSale.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult DeleteProduct(int id)
+        public ActionResult DeleteSale(int id)
         {
-            var value = db.TblProduct.Find(id);
-            db.TblProduct.Remove(value);
+            var value = db.TblSale.Find(id);
+            db.TblSale.Remove(value);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateProduct(int id)
+        public ActionResult UpdateSale(int id)
         {
-            var value = db.TblProduct.Find(id);
+            var value = db.TblSale.Find(id);
             return View(value);
         }
         [HttpPost]
-        public ActionResult UpdateProduct(TblProduct p)
+        public ActionResult UpdateSale(TblSale p)
         {
-            var value = db.TblProduct.Find(p);
-            value.ProductID = p.ProductID;
-            value.ProductName = p.ProductName;
-            value.ProductPrice = p.ProductPrice;
-            value.ImageUrl = p.ImageUrl;
+            var value = db.TblSale.Find(p);
+            value.SaleID = p.SaleID;
+            value.Title = p.Title;
+            value.SaleCategory = p.TblCategory.CategoryID;
             return RedirectToAction("Index");
         }
     }

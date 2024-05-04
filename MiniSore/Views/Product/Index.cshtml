@@ -19,7 +19,7 @@
         <tr>
             <td>@item.ProductID</td>
             <td>@item.ProductName</td>
-            <td>@item.ProductPrice</td>
+            <td>@item.ProductPrice$</td>
             <td>@item.ImageUrl</td>
             <td><a href="/Product/DeleteProduct/@item.ProductID/" class="btn btn-warning">Sil</a></td>
             <td><a href="/Product/UpdateProduct/@item.ProductID/" class="btn btn-success">Güncelle</a></td>
@@ -27,4 +27,4 @@
         </tr>
     }
 </table>
-<a href="/Product/CreateProduct/" class="btn btn-info">Yeni Ürün Girişi</a>
+<a href="/Product/CreateProduct" class="btn btn-info">Yeni Ürün Girişi</a>

@@ -22,7 +22,11 @@ namespace MiniSore.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult PartialHeader()
+        public PartialViewResult PartialNavbar()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialFooter()
         {
             return PartialView();
         }

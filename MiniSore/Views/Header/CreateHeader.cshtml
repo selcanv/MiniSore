@@ -1,0 +1,16 @@
+﻿@model MiniSore.Models.TblHome
+@{
+    ViewBag.Title = "CreateHeader";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Anasayfa Girişi</h2>
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.HeaderTitle, new { @class = "form-control" })
+    <br />
+    <label>Görsel</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Anasayfayı Kaydet</button>
+</form>

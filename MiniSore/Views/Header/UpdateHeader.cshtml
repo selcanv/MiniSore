@@ -1,0 +1,20 @@
+﻿@model MiniSore.Models.TblHome
+@{
+    ViewBag.Title = "UpdateHeader";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Anasayfa Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Anasayfa ID</label>
+    @Html.TextBoxFor(x => x.HomeID, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.HeaderTitle, new { @class = "form-control" })
+    <br />
+    <label>Ürün Görseli</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Anasayfa Güncelle</button>
+</form>

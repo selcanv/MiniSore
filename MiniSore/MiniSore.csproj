@@ -129,8 +129,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SaleController.cs" />
+    <Compile Include="Controllers\WatchesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -230,6 +233,7 @@
     <Content Include="Templates\MiniStore-1.0.0\images\commentor-item2.jpg" />
     <Content Include="Templates\MiniStore-1.0.0\images\commentor-item3.jpg" />
     <Content Include="Templates\MiniStore-1.0.0\images\dhl.png" />
+    <Content Include="Templates\Ready-Bootstrap-Dashboard-master\assets\icons8-admin-100.png" />
     <Content Include="Templates\MiniStore-1.0.0\images\insta-item1.jpg" />
     <Content Include="Templates\MiniStore-1.0.0\images\insta-item2.jpg" />
     <Content Include="Templates\MiniStore-1.0.0\images\insta-item3.jpg" />
@@ -376,8 +380,20 @@
     <Content Include="Views\AdminLayout\PartialHead.cshtml" />
     <Content Include="Views\AdminLayout\PartialScript.cshtml" />
     <Content Include="Views\AdminLayout\PartialSidebar.cshtml" />
-    <Content Include="Views\AdminLayout\PartialHeader.cshtml" />
+    <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\CreateProduct.cshtml" />
+    <Content Include="Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Views\AdminLayout\PartialFooter.cshtml" />
+    <Content Include="Views\Watches\Index.cshtml" />
+    <Content Include="Views\Watches\CreateProduct.cshtml" />
+    <Content Include="Views\Watches\UpdateProduct.cshtml" />
+    <Content Include="Views\Header\Index.cshtml" />
+    <Content Include="Views\Header\CreateHeader.cshtml" />
+    <Content Include="Views\Header\UpdateHeader.cshtml" />
+    <Content Include="Views\Sale\Index.cshtml" />
+    <Content Include="Views\Sale\CreateSale.cshtml" />
+    <Content Include="Views\Sale\UpdateSale.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

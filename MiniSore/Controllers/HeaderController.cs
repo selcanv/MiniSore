@@ -6,46 +6,45 @@ using System.Web.Mvc;
 using MiniSore.Models;
 namespace MiniSore.Controllers
 {
-    public class ProductController : Controller
+    public class HeaderController : Controller
     {
         DbMiniStoreEntities db = new DbMiniStoreEntities();
         public ActionResult Index()
         {
-            var values = db.TblProduct.ToList();
+            var values = db.TblHome.ToList();
             return View(values);
         }
         [HttpGet]
-        public ActionResult CreateProduct()
+        public ActionResult CreateHeader()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult CreateProduct(TblProduct p)
+        public ActionResult CreateHeader(TblHome p)
         {
-            db.TblProduct.Add(p);
+            db.TblHome.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult DeleteProduct(int id)
+        public ActionResult DeleteHeader(int id)
         {
-            var value = db.TblProduct.Find(id);
-            db.TblProduct.Remove(value);
+            var value = db.TblHome.Find(id);
+            db.TblHome.Remove(value);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateProduct(int id)
+        public ActionResult UpdateHeader(int id)
         {
-            var value = db.TblProduct.Find(id);
+            var value = db.TblHome.Find(id);
             return View(value);
         }
         [HttpPost]
-        public ActionResult UpdateProduct(TblProduct p)
+        public ActionResult UpdateHeader(TblHome p)
         {
-            var value = db.TblProduct.Find(p);
-            value.ProductID = p.ProductID;
-            value.ProductName = p.ProductName;
-            value.ProductPrice = p.ProductPrice;
+            var value = db.TblHome.Find(p);
+            value.HomeID = p.HomeID;
+            value.HeaderTitle = p.HeaderTitle;
             value.ImageUrl = p.ImageUrl;
             return RedirectToAction("Index");
         }

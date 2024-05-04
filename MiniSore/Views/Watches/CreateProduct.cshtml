@@ -1,0 +1,21 @@
+﻿@model MiniSore.Models.TblWatches
+@{
+    ViewBag.Title = "CreateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<h2>Yeni Saat Girişi</h2>
+<form method="post">
+    <label>Ürün Adı</label>
+    @Html.TextBoxFor(x => x.WatchesName, new { @class = "form-control" })
+    <br />
+    <label>Ürün Fiyatı</label>
+    @Html.TextBoxFor(x => x.WatchesPrice, new { @class = "form-control" })
+    <br />
+    <label>Ürün Görseli</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Saati Kaydet</button>
+</form>

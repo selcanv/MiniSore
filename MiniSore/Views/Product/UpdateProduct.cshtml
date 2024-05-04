@@ -1,0 +1,23 @@
+﻿@model MiniSore.Models.TblProduct
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Ürün Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Ürün ID</label>
+    @Html.TextBoxFor(x => x.ProductID, new { @class = "form-control" })
+    <br />
+    <label>Ürün Adı</label>
+    @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+    <br />
+    <label>Ürün Fiyatı</label>
+    @Html.TextBoxFor(x => x.ProductPrice, new { @class = "form-control" })
+    <br />
+    <label>Ürün Görseli</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ürünü Güncelle</button>
+</form>

@@ -1,0 +1,22 @@
+﻿@model MiniSore.Models.TblSale
+@{
+    ViewBag.Title = "CreateSale";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Son Gönderiler Girişi</h2>
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Oluşturulma Tarihi</label>
+    @Html.TextBoxFor(x => x.CreatedDate, new { @class = "form-control" })
+    <br />
+    <label>Görsel</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Kategorisi</label>
+    @Html.TextBoxFor(x => x.TblCategory.CategoryName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Son Göneriyi Kaydet</button>
+</form>

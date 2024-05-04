@@ -1,0 +1,29 @@
+﻿@model List<MiniSore.Models.TblHome>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>AnaSayfa Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Görsel</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.HomeID</td>
+            <td>@item.HeaderTitle</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Header/DeleteHeader/@item.HomeID/" class="btn btn-warning">Sil</a></td>
+            <td><a href="/Header/UpdateHeader/@item.HomeID/" class="btn btn-success">Güncelle</a></td>
+            <td></td>
+        </tr>
+    }
+</table>
+<a href="/Header/CreateHeader" class="btn btn-info">Yeni Anasayfa Girişi</a>
