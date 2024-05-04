@@ -14,5 +14,10 @@ namespace MiniSore.Controllers
             var values = db.TblProduct.ToList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult CreateProduct()
+        {
+            return View();
+        }
     }
 }
